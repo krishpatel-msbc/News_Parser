@@ -26,7 +26,7 @@ def extract_headlines(html):
             headlines.append(('H1', text))
             seen.add(text)
 
-    # For getting all h2 and h3 tags in their natural order
+    # For getting all h2 and h3 tags in their natural order as on the webpage
     for tag in soup.find_all(headline_tags):
         text = tag.get_text(strip= True)
         if text and text not in seen:
